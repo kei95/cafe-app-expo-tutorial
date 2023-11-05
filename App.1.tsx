@@ -7,12 +7,10 @@ import {
   TextInput,
   TouchableOpacity,
   FlatList,
-  Dimensions,
 } from "react-native";
 import Carousel from "react-native-reanimated-carousel";
 import { MapPinIcon } from "react-native-heroicons/solid";
 import { BellIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
-
 import { THEME_COLORS } from "./constants/theme";
 import { CATEGORIES } from "./constants/categories";
 import { CARD_HEIGHT, CoffeeCard } from "./components/coffeeCard";
@@ -89,20 +87,23 @@ export default function App() {
               );
             }}
           />
-        </View>
 
-        {/* coffee cards */}
-        <View className="py-2">
-          <Carousel
-            loop
-            mode="parallax"
-            width={Dimensions.get("screen").width}
-            data={COFFEE_ITEMS}
-            modeConfig={{
-              parallaxScrollingOffset: 160,
-            }}
-            renderItem={({ item }) => <CoffeeCard coffee={item} />}
-          />
+          {/* coffee cards */}
+          <View className="mt-16 py-2">
+            <Carousel
+              loop
+              mode="parallax"
+              width={400}
+              height={CARD_HEIGHT}
+              data={COFFEE_ITEMS}
+              scrollAnimationDuration={1000}
+              renderItem={({ item }) => (
+                <View className="pt-10">
+                  <CoffeeCard coffee={item} />
+                </View>
+              )}
+            />
+          </View>
         </View>
       </SafeAreaView>
     </View>
