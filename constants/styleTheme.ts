@@ -3,4 +3,7 @@ export const THEME_COLORS = {
   bgLight: "#d4a574",
   bgDark: "#8c5319",
   text: "#3C2A21",
+  textBackground: "#00000012",
 } as const;
+
+export const SHADOW_CLASS = "shadow-md shadow-black/75 bg-white";

@@ -1,5 +1,5 @@
 import { Dimensions, Image, View, Text, TouchableOpacity } from "react-native";
-import { THEME_COLORS } from "../constants/theme";
+import { SHADOW_CLASS, THEME_COLORS } from "../constants/styleTheme";
 import { Coffee } from "../constants/coffeeItems";
 import { PlusIcon, StarIcon } from "react-native-heroicons/solid";
 
@@ -10,16 +10,12 @@ export const CARD_HEIGHT = height * 0.6;
 export function CoffeeCard({ coffee }: { coffee: Coffee }) {
   return (
     <View
-      className={`rounded-3xl shadow-lg shadow-black/75 bg-white w-80 self-center`}
-      style={{
-        backgroundColor: THEME_COLORS.bgDark,
-      }}
+      className={`${SHADOW_CLASS} rounded-3xl shadow-lg shadow-black/75 w-80 self-center bg-bgDark`}
     >
-      <View className=" flex-row justify-center -mt-20 shadow-md shadow-black/75">
-        <Image
-          source={coffee.image}
-          className=" h-60 w-60 bg-slate-50 rounded-full"
-        />
+      <View
+        className={`${SHADOW_CLASS} h-60 w-60 flex-row justify-center -mt-20 rounded-full self-center`}
+      >
+        <Image source={coffee.image} className=" h-60 w-60 bg-slate-50" />
       </View>
       <View className="px-8 pt-4">
         <Text className="text-3xl font-semibold text-white">{coffee.name}</Text>

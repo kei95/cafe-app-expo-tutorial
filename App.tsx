@@ -13,9 +13,9 @@ import Carousel from "react-native-reanimated-carousel";
 import { MapPinIcon } from "react-native-heroicons/solid";
 import { BellIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
 
-import { THEME_COLORS } from "./constants/theme";
+import { THEME_COLORS } from "./constants/styleTheme";
 import { CATEGORIES } from "./constants/categories";
-import { CARD_HEIGHT, CoffeeCard } from "./components/coffeeCard";
+import { CoffeeCard } from "./components/coffeeCard";
 import { COFFEE_ITEMS } from "./constants/coffeeItems";
 
 export default function App() {
@@ -48,10 +48,7 @@ export default function App() {
               placeholder="Search"
               className="p-4 flex-1 font-semibold text-gray-700"
             />
-            <TouchableOpacity
-              className={`rounded-full p-2`}
-              style={{ backgroundColor: THEME_COLORS.bgLight }}
-            >
+            <TouchableOpacity className={`rounded-full p-2 bg-bgLight`}>
               <MagnifyingGlassIcon size="25" strokeWidth={2} color="#ffffff" />
             </TouchableOpacity>
           </View>
@@ -78,7 +75,7 @@ export default function App() {
                   style={{
                     backgroundColor: isActive
                       ? THEME_COLORS.bgLight
-                      : "rgba(0,0,0,0.07)",
+                      : THEME_COLORS.textBackground,
                   }}
                   className="p-4 px-5 rounded-full mr-2"
                 >
