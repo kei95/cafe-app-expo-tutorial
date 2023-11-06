@@ -28,7 +28,7 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
 
         {/* Coffee Review */}
         <View className="items-start pt-sm">
-          <View className=" bg-slate-100/25 flex-row items-center rounded-3xl py-base">
+          <View className=" p-sm bg-textBackground flex-row items-center rounded-3xl py-base">
             <StarIcon size="15" color="white" />
             <Text variant="base" styleClass="text-white">
               {coffee.stars}
