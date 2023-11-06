@@ -12,11 +12,12 @@ import Carousel from "react-native-reanimated-carousel";
 import { MapPinIcon } from "react-native-heroicons/solid";
 import { BellIcon, MagnifyingGlassIcon } from "react-native-heroicons/outline";
 
+import { Text } from "components/Text";
+import { THEME_COLORS } from "constants/designTokens";
+import { CATEGORIES } from "constants/categories";
+import { COFFEE_ITEMS } from "constants/coffeeItems";
+
 import { CoffeeCard } from "./CoffeeCard";
-import { Text } from "../components/Text";
-import { THEME_COLORS } from "../constants/designTokens";
-import { CATEGORIES } from "../constants/categories";
-import { COFFEE_ITEMS } from "../constants/coffeeItems";
 
 export function HomeScreen() {
   const [activeGenre, setActiveGenre] = useState<number | null>(null);

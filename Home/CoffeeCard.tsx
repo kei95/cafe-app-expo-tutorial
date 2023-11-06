@@ -1,9 +1,9 @@
 import { Dimensions, Image, View, TouchableOpacity } from "react-native";
 import { PlusIcon, StarIcon } from "react-native-heroicons/solid";
 
-import { Text } from "../components/Text";
-import { THEME_COLORS } from "../constants/designTokens";
-import { Coffee } from "../constants/coffeeItems";
+import { Text } from "components/Text";
+import { THEME_COLORS } from "constants/designTokens";
+import { Coffee } from "constants/coffeeItems";
 
 const { height } = Dimensions.get("window");
 
