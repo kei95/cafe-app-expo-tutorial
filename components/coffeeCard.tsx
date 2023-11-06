@@ -18,12 +18,12 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
       >
         <Image source={coffee.image} className=" h-60 w-60 bg-slate-50" />
       </View>
-      <View className="px-8 pt-4">
+      <View className="px-lg pt-md">
         <Text className="text-3xl font-semibold text-white">{coffee.name}</Text>
 
         {/* Coffee Review */}
-        <View className="items-start pt-2">
-          <View className=" bg-slate-100/25 flex-row items-center rounded-3xl py-1 px-2">
+        <View className="items-start pt-sm">
+          <View className=" bg-slate-100/25 flex-row items-center rounded-3xl py-base px-sm">
             <StarIcon size="15" color="white" />
             <Text className="text-white font-semibold text-base">
               {coffee.stars}
@@ -32,7 +32,7 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
         </View>
 
         {/* Coffee volume */}
-        <View className=" flex-row space-x-1 pt-2">
+        <View className=" flex-row space-x-1 pt-sm">
           <Text className=" font-semibold text-white text-base opacity-60">
             Volume
           </Text>
@@ -43,10 +43,10 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
 
         {/* Coffee price */}
         <View className="flex-row justify-between items-center">
-          <Text className=" text-white font-bold text-lg pt-12 pb-12">
+          <Text className=" text-white font-bold text-lg py-xxxl">
             $ {coffee.price}
           </Text>
-          <TouchableOpacity className="bg-white p-4 rounded-full">
+          <TouchableOpacity className="bg-white p-md rounded-full">
             <PlusIcon size={25} strokeWidth={2} color={THEME_COLORS.bgDark} />
           </TouchableOpacity>
         </View>

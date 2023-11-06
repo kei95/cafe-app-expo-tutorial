@@ -29,7 +29,7 @@ export default function App() {
       />
       <SafeAreaView className="flex-1">
         {/* Header? */}
-        <View className="px-4 flex-row justify-between items-center">
+        <View className="px-md flex-row justify-between items-center">
           <Image
             source={require("./assets/images/avatar.png")}
             className="h-9 w-9 rounded-full"
@@ -46,16 +46,16 @@ export default function App() {
           <View className="flex-row justify-center items-center rounded-full p-1 bg-[#e6e6e6]">
             <TextInput
               placeholder="Search"
-              className="p-4 flex-1 font-semibold text-gray-700"
+              className="p-md flex-1 font-semibold text-gray-700"
             />
-            <TouchableOpacity className={`rounded-full p-2 bg-bgLight`}>
+            <TouchableOpacity className={`rounded-full p-sm bg-bgLight`}>
               <MagnifyingGlassIcon size="25" strokeWidth={2} color="#ffffff" />
             </TouchableOpacity>
           </View>
         </View>
 
         {/* Categories horizontal list */}
-        <View className="px-5 mt-6">
+        <View className=" px-lg mt-lg">
           <FlatList
             horizontal
             showsHorizontalScrollIndicator={false}
@@ -77,7 +77,7 @@ export default function App() {
                       ? THEME_COLORS.bgLight
                       : THEME_COLORS.textBackground,
                   }}
-                  className="p-4 px-5 rounded-full mr-2"
+                  className="p-md px-lg rounded-full mr-2"
                 >
                   <Text className={`font-semibold ${textClassName}`}>
                     {item.title}
@@ -89,7 +89,7 @@ export default function App() {
         </View>
 
         {/* coffee cards */}
-        <View className="py-2">
+        <View className="py-sm">
           <Carousel
             loop
             mode="parallax"

@@ -6,6 +6,15 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    spacing: {
+      base: 4,
+      sm: 8,
+      md: 16,
+      lg: 24,
+      xl: 32,
+      xxl: 40,
+      xxxl: 48,
+    },
     colors: {
       white: "#ffffff",
       bgLight: "#d4a574",
