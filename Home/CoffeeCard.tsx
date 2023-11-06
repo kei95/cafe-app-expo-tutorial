@@ -15,7 +15,7 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
       className={`rounded-3xl w-80 self-center bg-bgDark shadow-xl shadow-black/75`}
     >
       <View
-        className={`h-60 w-60 flex-row justify-center -mt-20 rounded-full self-center shadow-md shadow-black/75`}
+        className={`h-60 w-60 flex-row justify-center -mt-20 rounded-full self-center bg-white shadow-md shadow-black/75`}
       >
         <Image source={coffee.image} className=" h-60 w-60 bg-slate-50" />
       </View>
