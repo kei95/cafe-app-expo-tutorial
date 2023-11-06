@@ -1,7 +1,8 @@
-import { Dimensions, Image, View, Text, TouchableOpacity } from "react-native";
+import { Dimensions, Image, View, TouchableOpacity } from "react-native";
 import { PlusIcon, StarIcon } from "react-native-heroicons/solid";
 
-import { SHADOW_CLASS, THEME_COLORS } from "../constants/styleTheme";
+import { Text } from "../components/Text";
+import { THEME_COLORS } from "../constants/designTokens";
 import { Coffee } from "../constants/coffeeItems";
 
 const { height } = Dimensions.get("window");
@@ -11,21 +12,25 @@ export const CARD_HEIGHT = height * 0.6;
 export function CoffeeCard({ coffee }: { coffee: Coffee }) {
   return (
     <View
-      className={`${SHADOW_CLASS} rounded-3xl shadow-lg shadow-black/75 w-80 self-center bg-bgDark`}
+      className={`rounded-3xl w-80 self-center bg-bgDark shadow-xl shadow-black/75`}
     >
       <View
-        className={`${SHADOW_CLASS} h-60 w-60 flex-row justify-center -mt-20 rounded-full self-center`}
+        className={`h-60 w-60 flex-row justify-center -mt-20 rounded-full self-center shadow-md shadow-black/75`}
       >
         <Image source={coffee.image} className=" h-60 w-60 bg-slate-50" />
       </View>
+
+      {/* Card body */}
       <View className="px-lg pt-md">
-        <Text className="text-3xl font-semibold text-white">{coffee.name}</Text>
+        <Text variant="title" styleClass="text-white">
+          {coffee.name}
+        </Text>
 
         {/* Coffee Review */}
         <View className="items-start pt-sm">
-          <View className=" bg-slate-100/25 flex-row items-center rounded-3xl py-base px-sm">
+          <View className=" bg-slate-100/25 flex-row items-center rounded-3xl py-base">
             <StarIcon size="15" color="white" />
-            <Text className="text-white font-semibold text-base">
+            <Text variant="base" styleClass="text-white">
               {coffee.stars}
             </Text>
           </View>
@@ -33,17 +38,17 @@ export function CoffeeCard({ coffee }: { coffee: Coffee }) {
 
         {/* Coffee volume */}
         <View className=" flex-row space-x-1 pt-sm">
-          <Text className=" font-semibold text-white text-base opacity-60">
-            Volume
+          <Text variant="base" styleClass="text-white opacity-60">
+            Volume:
           </Text>
-          <Text className=" font-semibold text-white text-base">
+          <Text variant="base" styleClass="text-white">
             {coffee.volume}
           </Text>
         </View>
 
         {/* Coffee price */}
-        <View className="flex-row justify-between items-center">
-          <Text className=" text-white font-bold text-lg py-xxxl">
+        <View className="flex-row justify-between items-center py-xxxl">
+          <Text variant="md" styleClass="text-white">
             $ {coffee.price}
           </Text>
           <TouchableOpacity className="bg-white p-md rounded-full">
